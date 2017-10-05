@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <p-panel header="Random Facts" *ngIf="fact;else noFact">
+          {{fact.text}}
+          <ng-template #noFact>
+            Fetching...
+          </ng-template>
+      </p-panel>
+    </div>
+  </div>
+</div>

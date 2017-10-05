@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <p-panel header="Facts">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <p-panel header="Date Fact">
+                <span *ngIf="dateFact;else noDatePicked">
+                  {{dateFact.text}}
+                </span>
+                <ng-template #noDatePicked>
+                  Date has not been picked.
+                </ng-template>
+              </p-panel>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-12">
+              <p-panel header="Year Fact">
+                <span *ngIf="yearFact;else noYearPicked">
+                    {{yearFact.text}}
+                </span>
+                <ng-template #noYearPicked>
+                  Year has not been picked.
+                </ng-template>
+              </p-panel>
+            </div>
+          </div>
+        </div>
+      </p-panel>
+    </div>
+  </div>
+</div>

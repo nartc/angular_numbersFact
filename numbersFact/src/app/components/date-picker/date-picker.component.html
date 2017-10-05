@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <p-panel header="Date Picker">
+        <div class="row">
+          <div class="col-md-6">
+            <p-calendar [(ngModel)]="date" [monthNavigator]="true" [yearNavigator]="true" yearRange="2000:2030" placeholder="Date" (onSelect)="onDateSelect($event)"></p-calendar>
+          </div>
+          <div class="col-md-6 mt-2">
+            <span *ngIf="date;else noDate">
+              You picked: {{date | date:'longDate'}}
+            </span>
+            <ng-template #noDate>
+              Please pick a date.
+            </ng-template>
+          </div>
+        </div>
+      </p-panel>
+    </div>
+  </div>
+</div>
